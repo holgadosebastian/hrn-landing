@@ -1,0 +1,107 @@
+.hrn-nav {
+	padding: 20px;
+	height: 75px;
+	color: #FFF;
+	background-color: #000;
+
+	@media #{$bp-from-laptop} {
+		display: -webkit-flex;
+		display: flex;
+		padding: 15px 40px;
+	}
+
+	.nav__trigger {
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		right: 10px;
+		width: 40px;
+		height: 75px;
+		font-size: 40px;
+		line-height: 80px;
+		text-align: center;
+		cursor: pointer;
+
+		@media #{$bp-from-laptop} {
+			display: none;
+		}
+	}
+
+	.nav__tag {
+		font-size: 14px;
+	}
+
+	.nav__menu {
+		@media #{$bp-to-tablet} {
+			display: -webkit-flex;
+			display: flex;
+			-webkit-flex-direction: column;
+			flex-direction: column;
+			position: fixed;
+			top: 75px;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			text-align: center;
+			background-color: #000;
+
+			&:not(.nav__menu--show) {
+				display: none;
+			}
+		}
+
+		@media #{$bp-from-laptop} {
+			display: -webkit-flex;
+			display: flex;
+		}
+	}
+
+	.nav__links {
+
+		@media #{$bp-to-tablet} {
+			-webkit-flex-grow: 10;
+			flex-grow: 10;
+		}
+
+		@media #{$bp-from-laptop} {
+			display: -webkit-flex;
+			display: flex;
+			-webkit-align-items: center;
+			align-items: center;
+		}
+
+		a {
+			display: inline-block;
+			font-size: 14px;
+			font-weight: 700;
+
+			@media #{$bp-to-tablet} {
+				padding: 5px 10px;
+			}
+
+			@media #{$bp-from-laptop} {
+				margin: 0 15px;
+			}
+
+			&.nav__active {
+				color: $color-green;
+
+				@media #{$bp-to-tablet} {
+					margin-bottom: 40px;
+				}
+			}
+		}
+	}
+
+	.nav__actions {
+
+		@media #{$bp-to-tablet} {
+			padding: 35px;
+		}
+
+		@media #{$bp-from-laptop} {
+			display: -webkit-flex;
+			display: flex;
+		}
+	}
+}

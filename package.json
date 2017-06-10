@@ -4,8 +4,8 @@
   "description": "A simple landing page",
   "main": "index.js",
   "scripts": {
-    "start": "",
-    "build": ""
+    "start": "gulp run",
+    "build": "gulp build"
   },
   "repository": {
     "type": "git",

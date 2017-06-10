@@ -1,10 +1,65 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="hrnLandingApp">
 	<head>
 		<meta charset="utf-8">
-		<title></title>
-	</head>
-	<body>
+		<title>HRN landing</title>
+		<meta name="description" content="This is a simple HRN landing page">
+		<meta name="viewport" content="width=device-width">
+		<meta name="language" content="EN">
+		<meta name="robots" content="noindex,nofollow" />
 
+		<link href="https://fonts.googleapis.com/css?family=Playfair+Display|Roboto" rel="stylesheet">
+		<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+		<link href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css" rel="stylesheet">
+
+		<link rel="stylesheet" href="css/main.css">
+	</head>
+	<body ng-controller="mainController as main">
+		<nav class="hrn-nav">
+			<div class="nav__logo">
+				<img src="images/hrntechworld-logo.png" alt="HRN Tech World" title="HRN Tech World Logo">
+				<p class="nav__tag"><span>LONDON</span> 21-22 MARCH 2017</p>
+			</div>
+			<div class="nav__menu"
+				ng-class="{ 'nav__menu--show' : main.showNav }">
+				<ul class="nav__links">
+					<li>
+						<a href="#" class="nav__active">HOME</a>
+					</li>
+					<li>
+						<a href="#">SPEAKERS</a>
+					</li>
+					<li>
+						<a href="#">SPONSORS</a>
+					</li>
+					<li>
+						<a href="#">TRAVEL</a>
+					</li>
+					<li>
+						<a href="#">MORE</a>
+					</li>
+				</ul>
+				<ul class="nav__actions">
+					<li class="-hide-from-md">
+						<span>BACK</span>
+					</li>
+					<li>
+						<span class="btn btn--full btn--accent">GET TICKETS</span>
+					</li>
+				</ul>
+			</div>
+			<span class="nav__trigger"
+				ng-click="main.showNav = !main.showNav">
+				<span class="fa" ng-class="main.showNav ? 'fa-close' : 'fa-bars'"></span>
+			</span>
+		</nav>
+
+		<!-- Vendor scripts -->
+		<script src="scripts/jquery.min.js"></script>
+		<script src="scripts/angular.min.js"></script>
+
+		<!-- App scripts -->
+		<script src="scripts/app.js"></script>
+		<script src="scripts/controllers/main-controller.js"></script>
 	</body>
 </html>

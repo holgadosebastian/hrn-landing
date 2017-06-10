@@ -1,0 +1,19 @@
+// Visibility
+
+.-display-xs {
+  @media #{$bp-from-tablet} {
+    display: none !important;
+  }
+}
+
+.-hide-xs {
+  @media #{$bp-smartphone} {
+    display: none !important;
+  }
+}
+
+.-hide-from-md {
+  @media #{$bp-from-laptop} {
+    display: none !important;
+  }
+}

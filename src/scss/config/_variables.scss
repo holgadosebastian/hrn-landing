@@ -1,0 +1,29 @@
+// Colors
+
+$color-green: #99cc00;
+
+// Typography
+
+$font-stack-primary: 'Roboto', Helvetica, Arial, sans-serif;
+$font-stack-secondary: 'Playfair Display', serif;
+
+// Breakpoints
+
+$bp-desktop-after: '1280px';
+$bp-desktop-before: '1279px';
+$bp-laptop-after: '1024px';
+$bp-laptop-before: '1023px';
+$bp-tablet-after: '768px';
+$bp-tablet-before: '767px';
+$bp-smartphone-after: '480px';
+$bp-smartphone-before: '479px';
+
+$bp-desktop: 'screen and (min-width: #{$bp-desktop-after})';
+$bp-to-laptop: 'screen and (max-width: #{$bp-desktop-before})';
+$bp-from-laptop: 'screen and (min-width: #{$bp-laptop-after})';
+$bp-to-tablet: 'screen and (max-width: #{$bp-laptop-before})';
+$bp-from-tablet-to-laptop: 'screen and (min-width: #{$bp-tablet-after}) and (max-width: #{$bp-desktop-before})';
+$bp-from-tablet: 'screen and (min-width: #{$bp-tablet-after})';
+$bp-tablet: 'screen and (min-width: #{$bp-tablet-after}) and (max-width: #{$bp-laptop-before})';
+$bp-smartphone: 'screen and (max-width: #{$bp-tablet-before})';
+$bp-smartphone-sm: 'screen and (max-width: #{$bp-smartphone-before})';
