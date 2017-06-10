@@ -1,0 +1,25 @@
+{
+  "name": "hrn-landing",
+  "version": "1.0.0",
+  "description": "A simple landing page",
+  "main": "index.js",
+  "scripts": {
+    "start": "",
+    "build": ""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/holgadosebastian/hrn-landing.git"
+  },
+  "author": "Sebastian Holgado",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/holgadosebastian/hrn-landing/issues"
+  },
+  "homepage": "https://github.com/holgadosebastian/hrn-landing#readme",
+  "devDependencies": {
+    "browser-sync": "^2.18.12",
+    "gulp": "^3.9.1",
+    "gulp-sass": "^3.1.0"
+  }
+}
