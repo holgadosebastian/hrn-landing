@@ -1,0 +1,43 @@
+.fow {
+	padding: 35px 15px;
+	text-align: center;
+
+	@media #{$bp-from-laptop} {
+		padding: 35px;
+	}
+
+	.fow__container {
+		margin: 0 auto;
+		max-width: 700px;
+	}
+
+	.fow__highlights {
+		margin-bottom: 70px;
+
+		@media #{$bp-to-tablet} {
+			display: none;
+		}
+
+		li {
+			display: inline-block;
+			margin: 0 15px;
+		}
+	}
+
+	.fow__highlight-icon {
+		font-size: 40px;
+		color: #d1d1d1;
+	}
+
+	.fow__actions {
+		margin-top: 20px;
+
+		@media #{$bp-from-laptop} {
+			margin-top: 50px;
+		}
+
+		& > .btn {
+			margin: 20px 10px 0 10px;
+		}
+	}
+}

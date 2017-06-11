@@ -15,10 +15,10 @@
 		<link rel="stylesheet" href="css/main.css">
 	</head>
 	<body ng-controller="mainController as main">
+		<!-- Main Navigation-->
 		<nav class="hrn-nav">
 			<div class="nav__logo">
 				<img src="images/hrntechworld-logo.png" alt="HRN Tech World" title="HRN Tech World Logo">
-				<p class="nav__tag"><span>LONDON</span> 21-22 MARCH 2017</p>
 			</div>
 			<div class="nav__menu"
 				ng-class="{ 'nav__menu--show' : main.showNav }">
@@ -40,8 +40,8 @@
 					</li>
 				</ul>
 				<ul class="nav__actions">
-					<li class="-hide-from-md">
-						<span>BACK</span>
+					<li class="utils__hide--from-md">
+						<span ng-click="main.showNav = false">BACK</span>
 					</li>
 					<li>
 						<span class="btn btn--full btn--accent">GET TICKETS</span>
@@ -53,6 +53,32 @@
 				<span class="fa" ng-class="main.showNav ? 'fa-close' : 'fa-bars'"></span>
 			</span>
 		</nav>
+
+		<!-- Main Hero -->
+		<header>
+			<h1>The greatest HR Shows on Earth</h1>
+		</header>
+
+		<!-- Future of Work section -->
+		<section class="fow">
+			<ul class="fow__highlights">
+				<li class="fow__highlight tooltip" ng-repeat="hl in main.highlights">
+					<span class="tooltip__container">
+						<span class="tooltip__content">{{ hl.name }}</span>
+					</span>
+					<span class="fow__highlight-icon" ng-class="hl.icon"></span>
+				</li>
+			</ul>
+			<div class="fow__container">
+				<h2 class="utils__mb--hg utils__tc--accent">THE FUTURE OF WORK</h2>
+				<p>For 5 years HR Tech World has morphed from 400 people to +6000 attendees. In 2017, appetite for the Greatest HR Shows on Earth will scale to +10,000 attendees from over 120 countries into our venues in London, Amsterdam and San Francisco!</p>
+				<p class="utils__mt--md">Start thinking about tomorrow and the day after that because the future won’t wait! Technology is the future, and everyday it brings fresh new solutions that are advancing HR and workforce management at speeds never seen before. It is predicted that within 10 years over half the office occupations in the world today will be disrupted or displaced by technology. 1/3 of Top 20 companies in every industry in every country will be disrupted in the next 3 years. Consider Brexit, Cognitive HR, Leadership Crisis, … </p>
+				<div class="fow__actions">
+					<span class="btn btn--outline btn--accent">SEE AGENDA</span>
+					<span class="btn btn--outline btn--accent">PLAY VIDEO</span>
+				</div>
+			</div>
+		</section>
 
 		<!-- Vendor scripts -->
 		<script src="scripts/jquery.min.js"></script>

@@ -1,19 +1,139 @@
+// Vars
+
+$colors: (
+  accent: $color-green,
+  white: #FFF,
+  black: #000
+);
+
+$spacing: (
+  hg: 30px,
+  lg: 20px,
+  bg: 15px,
+  md: 10px,
+  sm: 5px
+);
+
+// Mixins
+
+
+//CSS
+.utils__ {
+  @each $name, $color in $colors {
+    &tc--#{$name} {
+      color: $color;
+    }
+
+    &bc--#{$name} {
+      background-color: $color;
+    }
+  }
+}
+
+.utils__ {
+  @each $size, $dimension in $spacing {
+    &m--#{$size} {
+      margin: $dimension;
+    }
+
+    &mt--#{$size} {
+      margin-top: $dimension;
+    }
+
+    &mr--#{$size} {
+      margin-right: $dimension;
+    }
+
+    &mb--#{$size} {
+      margin-bottom: $dimension;
+    }
+
+    &ml--#{$size} {
+      margin-left: $dimension;
+    }
+
+    &p--#{$size} {
+      padding: $dimension;
+    }
+
+    &pt--#{$size} {
+      padding-top: $dimension;
+    }
+
+    &pr--#{$size} {
+      padding-right: $dimension;
+    }
+
+    &pb--#{$size} {
+      padding-bottom: $dimension;
+    }
+
+    &pl--#{$size} {
+      padding-left: $dimension;
+    }
+
+    @media #{$bp-smartphone} {
+      &m--#{$size}-sm {
+        margin: $dimension;
+      }
+
+      &mt--#{$size}-sm {
+        margin-top: $dimension;
+      }
+
+      &mr--#{$size}-sm {
+        margin-right: $dimension;
+      }
+
+      &mb--#{$size}-sm {
+        margin-bottom: $dimension;
+      }
+
+      &ml--#{$size}-sm {
+        margin-left: $dimension;
+      }
+
+      &p--#{$size}-sm {
+        padding: $dimension;
+      }
+
+      &pt--#{$size}-sm {
+        padding-top: $dimension;
+      }
+
+      &pr--#{$size}-sm {
+        padding-right: $dimension;
+      }
+
+      &pb--#{$size}-sm {
+        padding-bottom: $dimension;
+      }
+
+      &pl--#{$size}-sm {
+        padding-left: $dimension;
+      }
+    }
+  }
+}
+
 // Visibility
 
-.-display-xs {
-  @media #{$bp-from-tablet} {
-    display: none !important;
+.utils__ {
+  &display--xs {
+    @media #{$bp-from-tablet} {
+      display: none !important;
+    }
   }
-}
 
-.-hide-xs {
-  @media #{$bp-smartphone} {
-    display: none !important;
+  &hide--xs {
+    @media #{$bp-smartphone} {
+      display: none !important;
+    }
   }
-}
 
-.-hide-from-md {
-  @media #{$bp-from-laptop} {
-    display: none !important;
+  &hide--from-md {
+    @media #{$bp-from-laptop} {
+      display: none !important;
+    }
   }
 }

@@ -5,8 +5,11 @@
 @import 'config/variables';
 
 @import 'common/layout';
+@import 'common/headings';
 @import 'common/utility';
 
 @import 'partials/nav';
+@import 'partials/futureofwork';
 
-@import 'components/buttons';
+@import 'components/button';
+@import 'components/tooltip';
