@@ -1,7 +1,9 @@
 // Vars
 
 $colors: (
-  accent: $color-green,
+  green: $color-green,
+  red: $color-red,
+  cyan: $color-cyan,
   white: #FFF,
   black: #000
 );
@@ -116,6 +118,12 @@ $spacing: (
   }
 }
 
+.utils__ {
+  &bold {
+    font-weight: 700;
+  }
+}
+
 // Visibility
 
 .utils__ {
@@ -133,6 +141,18 @@ $spacing: (
 
   &hide--from-md {
     @media #{$bp-from-laptop} {
+      display: none !important;
+    }
+  }
+
+  &hide--to-bg {
+    @media #{$bp-to-laptop} {
+      display: none !important;
+    }
+  }
+
+  &hide--bg {
+    @media #{$bp-desktop} {
       display: none !important;
     }
   }

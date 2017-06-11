@@ -1,0 +1,19 @@
+.main-header {
+	height: 54vw;
+	background: #000 url('../images/header-bg-desktop.jpg') no-repeat center top;
+	background-size: cover;
+
+	.header__title {
+		font-family: $font-stack-secondary;
+		color: #FFF;
+		text-shadow: 0 0 4px rgba(#000, 0.4);
+	}
+
+	.header__actions {
+		text-align: center;
+
+		.btn {
+			margin: 10px 10px 0 10px;
+		}
+	}
+}
