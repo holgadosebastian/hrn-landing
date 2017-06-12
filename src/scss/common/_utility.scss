@@ -122,12 +122,16 @@ $spacing: (
   &bold {
     font-weight: 700;
   }
+
+  &black {
+    font-weight: 900;
+  }
 }
 
 // Visibility
 
 .utils__ {
-  &display--xs {
+  &show--xs {
     @media #{$bp-from-tablet} {
       display: none !important;
     }

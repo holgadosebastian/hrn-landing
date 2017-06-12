@@ -1,19 +1,257 @@
 .main-header {
-	height: 54vw;
-	background: #000 url('../images/header-bg-desktop.jpg') no-repeat center top;
-	background-size: cover;
+	position: relative;
+	background-color: #000;
+
+	@media #{$bp-smartphone} {
+		padding-bottom: 25px;
+	}
+
+	.header__hero {
+		position: relative;
+		// display: -webkit-flex;
+		// display: flex;
+		// -webkit-align-items: center;
+		// align-items: center;
+		// -webkit-justify-content: center;
+		// justify-content: center;
+		height: 117.5vw;
+		background: url('../images/header-bg-mobile.jpg') no-repeat center top;
+		background-size: cover;
+		text-align: center;
+
+		@media #{$bp-tablet} {
+			height: 53vw;
+			background-image: url('../images/header-bg-tablet.jpg');
+		}
+
+		@media #{$bp-from-laptop} {
+			height: 57.6vw;
+			background-image: url('../images/header-bg-desktop.jpg');
+		}
+
+		&:before{
+			content: '';
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			height: 33vw;
+			background: linear-gradient(to top, rgba(#000, 1), rgba(#000, 0));
+			z-index: 1;
+
+			@media #{$bp-tablet} {
+				height: 9vw;
+			}
+
+			@media #{$bp-from-laptop} {
+				height: 20vw;
+			}
+		}
+	}
 
 	.header__title {
+		display: inline-block;
+		position: relative;
 		font-family: $font-stack-secondary;
+		font-size: 11vw;
 		color: #FFF;
-		text-shadow: 0 0 4px rgba(#000, 0.4);
+		text-shadow: 0 0 8px #000;
+		z-index: 2;
+
+		@media #{$bp-smartphone} {
+			margin-top: 30vw;
+		}
+
+		@media #{$bp-tablet} {
+			top: 24vw;
+			font-size: 7vw;
+		}
+
+		@media #{$bp-from-laptop} {
+			top: 15vw;
+			font-size: 5.8vw;
+		}
+	}
+
+	.header__title-top,
+	.header__title-bottom {
+		position: absolute;
+		left: 8vw;
+		font-size: 4vw;
+		white-space: nowrap;
+
+		@media #{$bp-tablet} {
+			left: 5.090909vw;
+			font-size: 2.545454vw;
+		}
+
+		@media #{$bp-from-laptop} {
+			left: 4.2181818vw;
+			font-size: 2.1090909vw;
+		}
+	}
+
+	.header__title-top {
+		top: -1.1vw;
+
+		@media #{$bp-tablet} {
+			top: -0.7vw;
+		}
+
+		@media #{$bp-from-laptop} {
+			top: -0.58vw;
+		}
+	}
+
+	.header__title-bottom {
+		bottom: -4vw;
+
+		@media #{$bp-tablet} {
+			bottom: -2.545454vw;
+		}
+
+		@media #{$bp-from-laptop} {
+			bottom: -2.1090909vw;
+		}
 	}
 
 	.header__actions {
 		text-align: center;
+		z-index: 2;
+
+		@media #{$bp-tablet} {
+			position: relative;
+			margin-top: -6vw;
+		}
+
+		@media #{$bp-from-laptop} {
+			position: absolute;
+			left: 0;
+			right: 0;
+			top: 35vw;
+		}
+
+		p {
+			font-size: 16px;
+			color: #FFF;
+		}
 
 		.btn {
 			margin: 10px 10px 0 10px;
+		}
+	}
+
+	.header__featuring {
+		position: absolute;
+		z-index: 2;
+
+		@media #{$bp-smartphone} {
+			bottom: 20px;
+		}
+
+		@media #{$bp-from-tablet} {
+			top: 11.5vw;
+			width: 25vw;
+		}
+
+		@media #{$bp-from-laptop} {
+			top: 44vw;
+		}
+
+		&.header__featuring--left {
+			left: 20px;
+
+			@media #{$bp-smartphone} {
+				text-align: left;
+			}
+		}
+
+		&.header__featuring--right {
+			right: 20px;
+
+			@media #{$bp-smartphone} {
+				text-align: right;
+			}
+		}
+
+		p {
+			line-height: 1;
+			color: #FFF;
+
+			&:first-child {
+				font-weight: 300;
+				font-size: 14px;
+
+				@media #{$bp-from-laptop} {
+					margin-bottom: 0.3vw;
+					font-size: 1.3vw;
+				}
+			}
+
+			&:last-child {
+				font-size: 18px;
+				font-weight: 900;
+
+				@media #{$bp-from-laptop} {
+					font-size: 1.8vw;
+				}
+			}
+		}
+	}
+
+	.header__sponsors {
+		padding: 0 40px;
+
+		@media #{$bp-tablet} {
+			padding-bottom: 35px;
+		}
+
+		@media #{$bp-from-laptop} {
+			position: absolute;
+			left: 0;
+			right: 0;
+			top: 45vw;
+			z-index: 2;
+		}
+
+		&:before,
+		&:after {
+			content: "";
+			display: table;
+		}
+
+		&:after {
+			clear: both;
+		}
+
+		@media #{$bp-from-tablet} {
+			text-align: center;
+		}
+
+		a {
+			@media #{$bp-smartphone} {
+				width: 50%;
+				float: left;
+			}
+
+			@media #{$bp-from-tablet} {
+				display: inline-block;
+				margin: 3.8vw 3vw 0;
+			}
+
+			@media #{$bp-from-laptop} {
+				margin: 0 0.8vw;
+			}
+		}
+
+		img {
+			@media #{$bp-from-tablet} {
+				height: 5vw;
+			}
+
+			@media #{$bp-from-laptop} {
+				height: 1.8vw;
+			}
 		}
 	}
 }
