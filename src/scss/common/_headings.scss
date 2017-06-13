@@ -1,6 +1,10 @@
 
 h2 {
-	font-size: 22px;
+	font-size: 24px;
+
+	@media #{$bp-from-laptop} {
+		font-size: 36px;
+	}
 }
 
 p,

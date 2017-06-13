@@ -14,7 +14,7 @@
 	.fow__highlights {
 		margin-bottom: 70px;
 
-		@media #{$bp-to-tablet} {
+		@media #{$bp-to-laptop} {
 			display: none;
 		}
 

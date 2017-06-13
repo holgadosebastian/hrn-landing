@@ -55,10 +55,6 @@
 		position: relative;
 
 		@media #{$bp-to-laptop} {
-			display: -webkit-flex;
-			display: flex;
-			-webkit-flex-direction: column;
-			flex-direction: column;
 			position: fixed;
 			top: 75px;
 			left: 0;
@@ -68,7 +64,7 @@
 			background-color: #000;
 
 			&:not(.nav__menu--show) {
-				display: none;
+				visibility: hidden;
 			}
 		}
 
@@ -81,8 +77,11 @@
 	.nav__links {
 
 		@media #{$bp-to-laptop} {
-			-webkit-flex-grow: 10;
-			flex-grow: 10;
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			visibility: hidden;
 		}
 
 		@media #{$bp-desktop} {
@@ -95,10 +94,14 @@
 		a {
 			display: inline-block;
 			font-size: 14px;
-			font-weight: 700;
+			transition: background-color 0.2s ease-out, color 0.2s ease-out;
 
 			@media #{$bp-to-laptop} {
 				padding: 5px 10px;
+				font-weight: 700;
+				transform: translateX(50px);
+				opacity: 0;
+				transition: background-color 0.2s ease-out, color 0.2s ease-out, transform 0.2s ease-out, opacity 0.2s ease-out;
 			}
 
 			@media #{$bp-desktop} {
@@ -142,8 +145,8 @@
 				&:before {
 					content: '';
 					position: absolute;
-					top: -40px;
-					height: 40px;
+					top: -25px;
+					height: 25px;
 					left: 0;
 					right: 0;
 				}
@@ -168,6 +171,19 @@
 				}
 			}
 		}
+
+		&.nav__links--show {
+			@media #{$bp-to-laptop} {
+				visibility: visible;
+			}
+
+			a {
+				@media #{$bp-to-laptop} {
+					opacity: 1;
+					transform: translateX(0);
+				}
+			}
+		}
 	}
 
 	.nav__sub {
@@ -178,6 +194,10 @@
 	.nav__actions {
 
 		@media #{$bp-to-laptop} {
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			right: 0;
 			padding: 35px;
 		}
 

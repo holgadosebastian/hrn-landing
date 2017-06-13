@@ -25,7 +25,7 @@
 		}
 
 		@media #{$bp-from-laptop} {
-			height: 57.6vw;
+			height: 51.6vw;
 			background-image: url('../images/header-bg-desktop.jpg');
 		}
 
@@ -115,13 +115,27 @@
 		}
 	}
 
+	.header__tag {
+		font-size: 7.5vw;
+		color: #FFF;
+		font-weight: 900;
+
+		@media #{$bp-tablet} {
+			font-size: 4.5vw;
+		}
+
+		@media #{$bp-from-laptop} {
+			font-size: 35px;
+		}
+	}
+
 	.header__actions {
 		text-align: center;
 		z-index: 2;
 
 		@media #{$bp-tablet} {
 			position: relative;
-			margin-top: -6vw;
+			margin-top: -8vw;
 		}
 
 		@media #{$bp-from-laptop} {
@@ -251,6 +265,54 @@
 
 			@media #{$bp-from-laptop} {
 				height: 1.8vw;
+			}
+		}
+
+		@media #{$bp-smartphone} {
+			#avature,
+			#benify,
+			#cornerstone,
+			#successfactors-mobile,
+			#workday {
+				img {
+					margin-top: 8vw;
+					height: 11vw;
+				}
+			}
+
+			#avature {
+				img {
+					width: 26vw;
+				}
+			}
+
+			#benify {
+				img {
+					width: 33vw;
+				}
+			}
+
+			#cornerstone {
+				img {
+					width: 36vw;
+				}
+			}
+
+			#successfactors-mobile {
+				img {
+					width: 34vw;
+				}
+			}
+
+			#workday {
+				img {
+					width: 24vw;
+				}
+			}
+
+			#benify,
+			#successfactors-mobile {
+				text-align: right;
 			}
 		}
 	}

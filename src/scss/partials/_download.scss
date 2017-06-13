@@ -15,6 +15,39 @@
 		@media #{$bp-from-laptop} {
 			display: table-cell;
 			width: 50%;
+			vertical-align: middle;
 		}
+	}
+
+	.download__title {
+		margin-top: 20px;
+	}
+
+	.download__stores {
+		a {
+			margin: 25px 10px 0 10px;
+			height: 40px;
+			display: inline-block;
+		}
+
+		img {
+			height: 40px;
+		}
+	}
+
+	.download__illustration {
+		img {
+			@media #{$bp-smartphone} {
+				height: 130px;
+			}
+
+			@media #{$bp-tablet} {
+				height: 200px;
+			}
+		}
+	}
+
+	.btn {
+		margin-top: 20px;
 	}
 }

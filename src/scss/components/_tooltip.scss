@@ -5,8 +5,8 @@
 		position: absolute;
 		top: -25px;
 		left: 50%;
-		margin-left: -50px;
-		width: 100px;
+		margin-left: -100px;
+		width: 200px;
 		transform: scale(0.5);
 		transition: transform 0.2s ease-out, opacity 0.2s ease-out;
 		opacity: 0;
@@ -15,6 +15,7 @@
 	.tooltip__content {
 		position: relative;
 		padding: 5px 10px;
+		font-size: 13px;
 		color: #666;
 		background-color: #EEE;
 

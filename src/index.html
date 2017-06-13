@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html data-ng-app="hrnLandingApp">
+<html data-ng-app="hrnLandingApp" lang="en">
 	<head>
 		<meta charset="utf-8">
 		<title>HRN landing</title>
@@ -19,14 +19,14 @@
 		<!-- Main Navigation-->
 		<nav class="main-nav">
 			<div class="nav__logo">
-				<a href="#">
-					<img src="images/hrn-techworld-logo.svg" alt="HRN Tech World" title="HRN Tech World Logo">
+				<a href="#" title="HRN Tech World">
+					<img src="images/hrn-techworld-logo.svg" alt="HRN Tech World">
 				</a>
 			</div>
 			<div class="nav__menu"
 				data-ng-class="{ 'nav__menu--show' : main.showNav }">
 				<ul class="nav__links"
-					data-ng-show="!main.showNavMore">
+					data-ng-class="{ 'nav__links--show' : !main.showNavMore && main.showNav }">
 					<li>
 						<a href="#" class="nav__active">HOME</a>
 					</li>
@@ -44,7 +44,7 @@
 					</li>
 				</ul>
 				<ul class="nav__links nav__links--dropdown"
-					data-ng-class="{ 'utils__hide--to-bg' : !main.showNavMore, 'nav__links--hover' : main.hoverNavMore }">
+					data-ng-class="{ 'nav__links--show' : main.showNavMore, 'nav__links--hover' : main.hoverNavMore }">
 					<li class="utils__hide--bg">
 						<a href="#" class="nav__active">MORE</a>
 					</li>
@@ -75,7 +75,9 @@
 				</ul>
 				<ul class="nav__actions">
 					<li class="utils__hide--from-md">
-						<span class="nav__back" data-ng-click="main.showNav = false">BACK</span>
+						<span class="nav__back"
+							data-ng-show="main.showNavMore"
+							data-ng-click="main.showNavMore = false">BACK</span>
 					</li>
 					<li>
 						<span class="btn btn--full btn--accent">GET TICKETS</span>
@@ -102,28 +104,28 @@
 				</div>
 			</div>
 			<div class="header__actions">
-				<h2 class="utils__tc--white utils__black">UNLEASH YOUR PEOPLE!</h2>
+				<h2 class="header__tag">UNLEASH YOUR PEOPLE!</h2>
 				<p class="utils__show--xs">The Greatest HR Show on the Planet!</p>
 				<span class="btn btn--full">REQUEST AGENDA</span>
 				<span class="btn btn--full btn--accent">GET TICKETS</span>
 			</div>
 			<div class="header__sponsors">
-				<a href="#" title="Avature">
+				<a href="#" title="Avature" id="avature">
 					<img src="images/avature.svg" alt="Avature">
 				</a>
-				<a href="#" title="Benify">
+				<a href="#" title="Benify" id="benify">
 					<img src="images/benify.svg" alt="Benify">
 				</a>
-				<a href="#" title="Cornerstone">
+				<a href="#" title="Cornerstone" id="cornerstone">
 					<img src="images/cornerstone.svg" alt="Cornerstone">
 				</a>
-				<a href="#" title="Success Factors" class="utils__hide--xs">
+				<a href="#" title="Success Factors" class="utils__hide--xs" id="successfactors">
 					<img src="images/successfactors.svg" alt="Success Factors">
 				</a>
-				<a href="#" title="Success Factors" class="utils__show--xs">
+				<a href="#" title="Success Factors" class="utils__show--xs" id="successfactors-mobile">
 					<img src="images/successfactors-mobile.svg" alt="Success Factors">
 				</a>
-				<a href="#" title="Workday">
+				<a href="#" title="Workday" id="workday">
 					<img src="images/workday.svg" alt="Workday">
 				</a>
 			</div>
@@ -135,9 +137,9 @@
 			<ul class="fow__highlights">
 				<li class="fow__highlight tooltip" data-ng-repeat="hl in main.highlights">
 					<span class="tooltip__container">
-						<span class="tooltip__content">{{ hl.name }}</span>
+						<span class="tooltip__content" data-ng-style="{ 'color' : hl.color }">{{ hl.name }}</span>
 					</span>
-					<span class="fow__highlight-icon" data-ng-class="hl.icon"></span>
+					<span class="fow__highlight-icon fa" data-ng-class="hl.icon"></span>
 				</li>
 			</ul>
 			<div class="fow__container">
@@ -157,10 +159,15 @@
 					<div class="download__mobile">
 						<img src="images/mobile-app-phones.png" alt="Predictive Hire">
 					</div>
-					<h2 class="utils__mb--hg utils__black">DOWNLOAD THE APPLICATION</h2>
+					<h2 class="download__title utils__mb--hg utils__black">DOWNLOAD THE APPLICATION</h2>
 					<p>Download the HR Tech World Mobile App and instantly connect with thousands of attendees right on your fingertips. The app is your online diary that allows you to access the conference agenda, interactive floorplans, schedule meetings with buyer prospects, industry peers and so much more... </p>
 					<div class="download__stores">
-
+						<a href="#" title="Google Play">
+							<img src="images/googleplay.svg" alt="Google Play">
+						</a>
+						<a href="#" title="Apple Store">
+							<img src="images/applestore.svg" alt="Apple Store">
+						</a>
 					</div>
 				</div>
 
